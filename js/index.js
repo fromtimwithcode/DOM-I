@@ -100,3 +100,21 @@ contentParagraphs[7].innerHTML = 'sales@greatidea.io';
 
 // Copyright
 contentParagraphs[8].innerHTML = 'Copyright Great Idea! 2018';
+
+// Nav color to green
+let navColor = document.querySelectorAll('nav a');
+navColor[0].setAttribute('style', 'color: green');
+navColor[1].setAttribute('style', 'color: green');
+navColor[2].setAttribute('style', 'color: green');
+navColor[3].setAttribute('style', 'color: green');
+navColor[4].setAttribute('style', 'color: green');
+navColor[5].setAttribute('style', 'color: green');
+
+// Append and prepend
+let append = document.querySelector('nav');
+append.append('Append');
+append.setAttribute('style', 'color: green');
+
+let prepend = document.querySelector('nav');
+prepend.prepend('Prepend');
+prepend.setAttribute('style', 'color: green');
