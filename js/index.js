@@ -63,3 +63,8 @@ contact.innerHTML = 'Contact';
 // Title
 let title = document.querySelector('h1');
 title.textContent = 'DOM IS AWESOME';
+
+// Main image
+let ctaImage = document.querySelector('#cta-img');
+ctaImage.src = 'img/header-img.png';
+console.log(ctaImage);
