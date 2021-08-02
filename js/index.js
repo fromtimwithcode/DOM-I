@@ -103,3 +103,15 @@ addNav.prepend(prependLink);
 // Nav links to green
 const links = document.querySelectorAll('a');
 links.forEach(item => item.style.color = 'green');
+
+// Add button with event listener
+const footer = document.querySelector('footer');
+const eventButton = document.createElement('button');
+eventButton.innerHTML = 'Update';
+footer.append(eventButton);
+eventButton.style.fontSize = '1.2rem';
+eventButton.style.width = '15%';
+
+eventButton.addEventListener('click', event => {
+  contentParagraphs[8].innerHTML = 'This button works!';
+});
