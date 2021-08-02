@@ -62,9 +62,32 @@ contact.innerHTML = 'Contact';
 
 // Title
 let title = document.querySelector('h1');
-title.textContent = 'DOM IS AWESOME';
+title.innerHTML = 'DOM<br>IS<br>AWESOME';
 
 // Main image
 let ctaImage = document.querySelector('#cta-img');
 ctaImage.src = 'img/header-img.png';
-console.log(ctaImage);
+
+// CTA button
+let ctaButton = document.querySelector('.cta button');
+ctaButton.innerHTML = 'Get Started';
+
+// Main content titles
+let contentTitles = document.querySelectorAll('h4');
+contentTitles[0].innerHTML = 'Features';
+contentTitles[1].innerHTML = 'About';
+contentTitles[2].innerHTML = 'Services';
+contentTitles[3].innerHTML = 'Product';
+contentTitles[4].innerHTML = 'Vision';
+
+// Main content paragraphs
+let contentParagraphs = document.querySelectorAll('p');
+contentParagraphs[0].innerHTML = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+contentParagraphs[1].innerHTML = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+contentParagraphs[2].innerHTML = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+contentParagraphs[3].innerHTML = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+contentParagraphs[4].innerHTML = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+// Main content image
+let mainImage = document.querySelector('#middle-img');
+mainImage.src = 'img/mid-page-accent.jpg';
