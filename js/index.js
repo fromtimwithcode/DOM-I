@@ -42,79 +42,64 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Navigation
-let services = document.querySelector('nav a');
-services.innerHTML = 'Services';
+const navLinks = document.querySelectorAll('a');
 
-let product = document.querySelector('nav a:nth-of-type(2)');
-product.innerHTML = 'Product';
-
-let vision = document.querySelector('nav a:nth-of-type(3)');
-vision.innerHTML = 'Vision';
-
-let features = document.querySelector('nav a:nth-of-type(4)');
-features.innerHTML = 'Features';
-
-let about = document.querySelector('nav a:nth-of-type(5)');
-about.innerHTML = 'About';
-
-let contact = document.querySelector('nav a:nth-of-type(6)');
-contact.innerHTML = 'Contact';
+navLinks.forEach((item, index) => item.innerHTML = Object.values(siteContent.nav)[index]);
 
 // Title
 let title = document.querySelector('h1');
-title.innerHTML = 'DOM<br>IS<br>AWESOME';
+title.innerHTML = siteContent['cta']['h1'];
 
 // Main image
 let ctaImage = document.querySelector('#cta-img');
-ctaImage.src = 'img/header-img.png';
+ctaImage.src = siteContent['cta']['img-src']
 
 // CTA button
 let ctaButton = document.querySelector('.cta button');
-ctaButton.innerHTML = 'Get Started';
+ctaButton.innerHTML = siteContent['cta']['button'];
 
 // Main content titles
 let contentTitles = document.querySelectorAll('h4');
-contentTitles[0].innerHTML = 'Features';
-contentTitles[1].innerHTML = 'About';
-contentTitles[2].innerHTML = 'Services';
-contentTitles[3].innerHTML = 'Product';
-contentTitles[4].innerHTML = 'Vision';
+contentTitles[0].innerHTML = siteContent['main-content']['features-h4'];
+contentTitles[1].innerHTML = siteContent['main-content']['about-h4'];
+contentTitles[2].innerHTML = siteContent['main-content']['services-h4'];
+contentTitles[3].innerHTML = siteContent['main-content']['product-h4'];
+contentTitles[4].innerHTML = siteContent['main-content']['vision-h4'];
 
 // Main content paragraphs
 let contentParagraphs = document.querySelectorAll('p');
-contentParagraphs[0].innerHTML = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-contentParagraphs[1].innerHTML = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-contentParagraphs[2].innerHTML = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-contentParagraphs[3].innerHTML = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-contentParagraphs[4].innerHTML = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+contentParagraphs[0].innerHTML = siteContent['main-content']['features-content'];
+contentParagraphs[1].innerHTML = siteContent['main-content']['about-content'];
+contentParagraphs[2].innerHTML = siteContent['main-content']['services-content'];
+contentParagraphs[3].innerHTML = siteContent['main-content']['product-content'];
+contentParagraphs[4].innerHTML = siteContent['main-content']['vision-content'];
 
 // Main content image
 let mainImage = document.querySelector('#middle-img');
-mainImage.src = 'img/mid-page-accent.jpg';
+mainImage.src = siteContent['main-content']['middle-img-src'];
 
 // Footer
-contentTitles[5].innerHTML = 'Contact';
-contentParagraphs[5].innerHTML = '123 Way 456 Street<br>Somewhere, USA';
-contentParagraphs[6].innerHTML = '1 (888) 888-8888';
-contentParagraphs[7].innerHTML = 'sales@greatidea.io';
+contentTitles[5].innerHTML = siteContent['contact']['contact-h4'];
+contentParagraphs[5].innerHTML = siteContent['contact']['address'];
+contentParagraphs[6].innerHTML = siteContent['contact']['phone'];
+contentParagraphs[7].innerHTML = siteContent['contact']['email'];
 
 // Copyright
-contentParagraphs[8].innerHTML = 'Copyright Great Idea! 2018';
-
-// Nav color to green
-let navColor = document.querySelectorAll('nav a');
-navColor[0].setAttribute('style', 'color: green');
-navColor[1].setAttribute('style', 'color: green');
-navColor[2].setAttribute('style', 'color: green');
-navColor[3].setAttribute('style', 'color: green');
-navColor[4].setAttribute('style', 'color: green');
-navColor[5].setAttribute('style', 'color: green');
+contentParagraphs[8].innerHTML = siteContent['footer']['copyright'];
 
 // Append and prepend
-let append = document.querySelector('nav');
-append.append('Append');
-append.setAttribute('style', 'color: green');
+const addNav = document.querySelector('nav');
 
-let prepend = document.querySelector('nav');
-prepend.prepend('Prepend');
-prepend.setAttribute('style', 'color: green');
+const appendLink = document.createElement('a');
+appendLink.innerHTML = 'Append';
+appendLink.href = '#';
+addNav.append(appendLink);
+
+const prependLink = document.createElement('a');
+prependLink.innerHTML = 'Prepend';
+prependLink.href = '#';
+addNav.prepend(prependLink);
+
+// Nav links to green
+const links = document.querySelectorAll('a');
+links.forEach(item => item.style.color = 'green');
