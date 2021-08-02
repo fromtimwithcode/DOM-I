@@ -91,3 +91,12 @@ contentParagraphs[4].innerHTML = 'Vision content elementum magna eros, ac posuer
 // Main content image
 let mainImage = document.querySelector('#middle-img');
 mainImage.src = 'img/mid-page-accent.jpg';
+
+// Footer
+contentTitles[5].innerHTML = 'Contact';
+contentParagraphs[5].innerHTML = '123 Way 456 Street<br>Somewhere, USA';
+contentParagraphs[6].innerHTML = '1 (888) 888-8888';
+contentParagraphs[7].innerHTML = 'sales@greatidea.io';
+
+// Copyright
+contentParagraphs[8].innerHTML = 'Copyright Great Idea! 2018';
