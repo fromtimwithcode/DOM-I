@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Navigation
 let services = document.querySelector('nav a');
 services.innerHTML = 'Services';
 
@@ -59,6 +60,6 @@ about.innerHTML = 'About';
 let contact = document.querySelector('nav a:nth-of-type(6)');
 contact.innerHTML = 'Contact';
 
+// Title
 let title = document.querySelector('h1');
 title.textContent = 'DOM IS AWESOME';
-console.log(title);
